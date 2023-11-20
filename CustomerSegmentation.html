@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Customer Segmentation
+        </title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            body{
+                background-image: url('https://www.fanview.tech/wp-content/uploads/2021/12/Customer-Segmentation-Featured-Image-3.png');
+                background-repeat: no-repeat;
+                background-attachment: fixed;  
+                background-size: cover;
+            }
+            .login, .predict{
+                justify-content: center;
+                margin: 30px;
+                margin-left: 100px;
+                margin-top: 40px;
+            }
+            .main{
+                display: flex;
+                flex-direction: column;
+            }
+            h1{
+                text-align: center;
+                font-size: 50px;
+            }
+            .button{
+                background-color: black;
+                border: none;
+                color: white;
+                padding: 15px 32px;
+                margin: 20px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                border-radius: 5px;
+            }
+            label{
+                font-size: 18px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Customer Segmentation</h1>
+        <div class = "login">
+        <h2>Please fill the following for prediction</h2>
+        <form action="/predict" method="post">
+            <label for="Sex">Sex:</label>
+                <select id="Sex" name="Sex" size="1">
+                <option value=0>Female</option>
+                <option value=1>Male</option>
+                </select>
+            <br>
+            <br>
+            <label for="Marital Status">Marital Status:</label>
+                <select id="Marital Status" name="Marital Status" size="1">
+                <option value=0>Single</option>
+                <option value=1>Married</option>
+                </select>
+            <br>
+            <br>
+            <label for="Age">Age:</label>
+            <input type = "number" min = "20" max="80" name="Age" placeholder="Age" required="required"/>
+            <br>
+            <br>
+            <label>Education: </label>
+            <input type = "number" min = "0" max="3" name="Education" placeholder="Education" required="required" style="width:100px"/><br>
+            <br>
+            <br>
+            <label>Income: </label>
+            <input type = "number" min = "5000" name="Income" placeholder="Income" required="required"/><br>
+            <br>
+            <br>
+            <label for="Occupation">Occupation:</label>
+                <select id="Occupation" name="Occupation" size="1">
+                <option value=0>Not Working</option>
+                <option value=1>Working</option>
+                <option value=2>Business</option>
+                </select>
+            <br>
+            <br>
+            <label for="Settlement size">Settlement size:</label>
+                <select id="Settlement size" name="Settlement size" size="1">
+                <option value=0>0</option>
+                <option value=1>1</option>
+                <option value=2>2</option>
+                </select>
+            <br>
+            <br>
+            <button type = "submit" class= "button">Predict</button>
+        </form>
+</div>
+    </body>
+</html>

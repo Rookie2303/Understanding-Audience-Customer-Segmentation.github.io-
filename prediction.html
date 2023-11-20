@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Prediction Page</title>
+        <style>
+            .result{
+                margin-top: 80px;
+            }
+            body{
+                background-image: url('https://s33009.pcdn.co/wp-content/uploads/2023/04/AdobeStock_85391222.jpeg.optimal.jpeg');
+                background-repeat: no-repeat;
+                background-attachment: fixed;  
+                background-size: cover;
+                background-position: center;
+            }
+            a {
+                font-size: 25px;
+            }
+            .goback{
+                margin-top: 50px;
+            }
+        </style>
+    </head>
+    <body>
+        <center>
+        <h1 style = "margin-top: 40px;">Prediction</h1>
+        <div class = "result">
+            {%if data == 1%}
+            <h1>Not a Potential Customer</h1>
+            {%elif data == 2%}
+            <h1>Potential Customer</h1>
+            {%else%}
+            <h1>Highly Potential Customer</h1>
+            {% endif %}
+            <br>
+        </div>
+        <div class = "gpback">
+        <a href = '/'>Go To Home Page back</a>
+        </div>
+        </center>
+    </body>
+</html>
